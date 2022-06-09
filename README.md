@@ -5,7 +5,9 @@ https://user-images.githubusercontent.com/43719098/172848623-fd44d9c8-06ea-4fea-
 
 # Requirements
 Java 18
+
 NodeJS 18
+
 Angular 14.0.0
 
 # Build from source
