@@ -1,0 +1,54 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentHelloWorld.id">
+    <h4>HelloWorld</h4>
+    <div>
+      <label><strong>Title:</strong></label> {{ currentHelloWorld.name }}
+    </div>
+    <a
+      class="badge badge-warning"
+      routerLink="/helloworlds/{{ currentHelloWorld.id }}"
+    >
+      Edit
+    </a>
+  </div>
+
+  <div *ngIf="!currentHelloWorld">
+    <br/>
+    <p>Please click on a HelloWorld...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentHelloWorld.id" class="edit-form">
+    <h4>Tutorial</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Names</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentHelloWorld.name"
+          name="title"
+        />
+      </div>
+    </form>
+    <button class="badge badge-danger mr-2" (click)="deleteHelloWorld()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateHelloWorld()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentHelloWorld.id">
+    <br/>
+    <p>Cannot access this HelloWorld...</p>
+  </div>
+</ng-template>
