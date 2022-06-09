@@ -13,6 +13,7 @@ Angular 14.0.0
 ## Optional
 * To try the UI 
 ```
+  npm install
   ng serve
 ```
 link: http://localhost:4200/
@@ -22,15 +23,16 @@ link: http://localhost:4200/
 ## Integrating Angular With SpringBoot  
 1. Build HelloWorldFrontend
 ```
-  ng build --configuration prod
+  npm install
+  ng build --configuration production
 ```
 It is going to create static files.
 
 2. Build HelloWorldBackend
 Build and run the Spring Boot server with commands:
 ```
-  mvn clean install
-  mvn spring-boot:run
+  ./mvnw clean install
+  ./mvnw spring-boot:run
 ```
 First command is going to copy the static files form frontend to backend as defined in pom.xml (line: 
 
