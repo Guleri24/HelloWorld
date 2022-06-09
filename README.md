@@ -34,7 +34,7 @@ Build and run the Spring Boot server with commands:
   ./mvnw clean install
   ./mvnw spring-boot:run
 ```
-First command is going to copy the static files form frontend to backend as defined in pom.xml (line: 
+First command is going to copy the static files form frontend to backend as defined in pom.xml plugin (line: 47 onwards)
 
 Open browser with url: http://localhost:8080/
 
